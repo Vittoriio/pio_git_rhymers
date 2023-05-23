@@ -8,7 +8,11 @@ public class DefaultCountingOutRhymer {
     public static final int CALL_ERR = -1;
     private final int[] numbers = new int[NUMBER_OF_ELEMENTS];
 
-    public int total = -1;
+    private int total = CALL_ERR;
+
+    public int getTotal() {
+        return total;
+    }
 
     public void countIn(int in) {
         if (!isFull())
